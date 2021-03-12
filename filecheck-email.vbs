@@ -36,7 +36,7 @@ Sub send_mail(file_name,file_path,file_date)
 Set objMessage = CreateObject("CDO.Message") 
 objMessage.Subject = "InterDyn Import File stuck for GP" 
 objMessage.From = "OnBaseAlerts@desertfinancial.com" 
-objMessage.To = "frank.jensen@switchthink.com,howard.hodge@switchthink.com,christina.bridwell@desertfinancial.com,Denise.sierra@desertfinancial.com,Nancy.Hong@desertfinancial.com,Erica.Eve@desertfinancial.com,Stephanie.Alejandro@desertfinancial.com" 
+	objMessage.To = "comma delimited email list goes here" 
 'objMessage.To = "frank.jensen@desertfinancial.com"
 objMessage.TextBody = "Below is the path and file that has been stuck for more than 30min." & vbcr & vbcr
 
@@ -51,7 +51,7 @@ objMessage.TextBody = objMessage.TextBody & vbcr & vbcr & "Email sent from: " & 
 objMessage.Configuration.Fields.Item _
 ("http://schemas.microsoft.com/cdo/configuration/sendusing") = 2
 objMessage.Configuration.Fields.Item _
-("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "relay.desertfinancial.com"
+	("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "relay server goes here"
 objMessage.Configuration.Fields.Item _
 ("http://schemas.microsoft.com/cdo/configuration/smtpserverport") = 25
 objMessage.Configuration.Fields.Item _
